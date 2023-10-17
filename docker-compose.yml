@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  oracle:
+    image: marciokleber/oracle-ee-12c:1.0
+    container_name: oracle
+    volumes:
+      - ./src/main/resources/oracle:/opt/oracle/scripts/startup
+    ports:
+      - 1521:1521
